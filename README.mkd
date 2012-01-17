@@ -1,0 +1,22 @@
+# reg
+
+A register for Node.js.
+
+## Installation
+
+`npm install reg` or `npm install -g reg`
+
+## Usage
+
+```js
+var reg = require("reg");
+```
+
+## Bugs and Issues
+
+If you encounter any bugs or issues, feel free to open an issue at
+[github](//github.com/pvorb/node-reg/issues).
+
+## License
+
+The [MIT license](http://vorb.de/license/mit.html).

@@ -1,0 +1,28 @@
+{
+  "name": "reg",
+  "description": "A register for Node.js",
+    "author": "Paul Vorbach <paul@vorb.de> (http://vorb.de/)",
+  "tags": [ "index", "db", "blog", "cms" ],
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pvorb/node-reg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pvorb/node-reg/issues"
+  },
+  "main": "./reg.js",
+  "engines": {
+    "node": ">=0.6.0"
+  },
+  "dependencies": {
+    "alfred": ">=0.0.0"
+  },
+  "devDependencies": {},
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://vorb.de/license/mit.html"
+    }
+  ]
+}
