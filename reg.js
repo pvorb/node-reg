@@ -1,4 +1,4 @@
-// reg - a register for node.js
+// reg - a registry for documents
 ;(function () {
 
 var Collection = require('mongodb').Collection;
@@ -34,14 +34,14 @@ function Reg(col, indexFields, cb) {
 }
 
 // cb(err)
-Reg.prototype.add = function insert(id, obj, cb) {
+Reg.prototype.save = function save(id, obj, cb) {
   if (typeof obj != 'object')
     return cb(new Error('obj must be an object'));
   obj._id = id;
   this.collection.save(obj, function (err) {
     if (err)
       return cb(err);
-    cb(null, id);
+    cb(null);
   });
 };
 
@@ -52,9 +52,9 @@ Reg.prototype.extend = function update(id, obj, cb) {
   this.collection.update({ _id: id }, { $set: obj },
       { upsert: true, safe: true },
       function (err) {
-    if (er)
+    if (err)
       return cb(err);
-    cb(null, id);
+    cb(null);
   });
 };
 
@@ -63,12 +63,20 @@ Reg.prototype.remove = function remove(id, cb) {
   this.collection.remove({ _id: id }, function (err) {
     if (err)
       return cb(err);
-    cb(null, id);
+    cb(null);
   });
 };
 
+// get(query, fields, order, limit, cb)
+Reg.prototype.get = function getPages(query, fields, order, limit, cb) {
+  cb(null, this.collection.find(query, fields, {
+    limit: limit,
+    sort: order
+  }));
+};
+
 // getPages(query, fields, order, limit, cb)
-Reg.prototype.getPages = function pagination(query, fields, order, limit, cb) {
+Reg.prototype.getPages = function getPages(query, fields, order, limit, cb) {
   var self = this;
 
   this.collection.find(query).count(function (err, count) {

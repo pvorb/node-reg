@@ -1,6 +1,6 @@
 {
   "name": "reg",
-  "description": "A register for Node.js",
+  "description": "A registry for documents",
   "author": "Paul Vorbach <paul@vorb.de> (http://vorb.de/)",
   "tags": [
     "index",
