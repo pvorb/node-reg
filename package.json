@@ -2,8 +2,13 @@
   "name": "reg",
   "description": "A registry for documents",
   "author": "Paul Vorbach <paul@vorb.de> (http://vorb.de/)",
-  "tags": [ "index", "db", "blog", "cms" ],
-  "version": "0.1.0",
+  "tags": [
+    "index",
+    "db",
+    "blog",
+    "cms"
+  ],
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/pvorb/node-reg.git"
@@ -23,5 +28,7 @@
       "type": "MIT",
       "url": "http://vorb.de/license/mit.html"
     }
-  ]
+  ],
+  "devDependencies": {},
+  "optionalDependencies": {}
 }
