@@ -2,12 +2,7 @@
   "name": "reg",
   "description": "A registry for documents",
   "author": "Paul Vorbach <paul@vorb.de> (http://vorb.de/)",
-  "tags": [
-    "index",
-    "db",
-    "blog",
-    "cms"
-  ],
+  "tags": [ "index", "db", "blog", "cms" ],
   "version": "0.1.0",
   "repository": {
     "type": "git",
@@ -21,16 +16,12 @@
     "node": ">=0.6.0"
   },
   "dependencies": {
-    "mongodb": ">=0.9.8-3",
-    "optimist": ">=0.3.1",
-    "yamlparser": ">=0.0.2"
+    "mongodb": ">=0.9.9"
   },
-  "devDependencies": {},
   "licenses": [
     {
       "type": "MIT",
       "url": "http://vorb.de/license/mit.html"
     }
-  ],
-  "optionalDependencies": {}
+  ]
 }
